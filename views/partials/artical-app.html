@@ -1,0 +1,52 @@
+<!--
+   This is the page that loads artical data
+   -->
+<!-- main content -->
+<div id="content">
+   <div class="wrap full">
+      <ul class="clearfix" >
+         <li class="case-data  ">
+            <label  class="main-title" > Case Studies </label>
+            <label class="full-title "  > {{caseArticle.title}} </label>
+            <label >{{caseArticle.caption}}</label>
+         </li>
+         <li class="case-data-image" >
+            <img src="{{caseArticle.image}}" class="image"  alt="{{caseArticle.des}}" title="{{caseArticle.des}}">
+         </li>
+      </ul>
+      <!-- artical content -->
+      <div class="row top-row">
+         <hr>
+         <label class="full-title-bold"  >{{articles.length}} articles tagged water </label>
+         <select class="pull-right sort"  ng-model="predicate" >
+            <option value="-date.timestamp" >Most Recent</option>
+            <option value="date.timestamp">Less Recent</option>
+            <option value="-title">Title Desc</option>
+            <option value="title">Title Asc</option>
+         </select>
+         <label class="pull-right sort">Sort by :</label>
+         <hr>
+         <ul class="clearfix" >
+         <li ng-repeat="article in articles | orderBy:predicate | limitTo:articleLimit  " class="article-data " >
+            <div class="image-wrapper" ng-show = "article.image != '' && article.image != undefined" >
+               <img src="{{article.image}}" alt="" class="img-responsive" alt="{{article.title}}" title="{{article.title}}"/>
+            </div>
+            <label  class="label-title"> {{article.title}} </label>
+            <font color="#A0A0A0"  > {{article.date.plain}} </font>
+            <label  > {{article.caption}} </label>
+            <ul  class="clearfix" >
+               <li ng-repeat="tag in article.tags "  class="tag-data "  >{{tag}}
+               </li>
+               </ui>
+               </li>
+            </ul>
+      </div>
+       <!-- Load content -->
+      <div class="wrapper">
+      <button class="btn button"  href="#" ng-hide="articles.length<articleLimit"
+         ng-click="loadMore()">Load More</button>
+      </div>
+       <!-- Load content -->
+   </div>
+    <!-- artical content -->
+</div>
