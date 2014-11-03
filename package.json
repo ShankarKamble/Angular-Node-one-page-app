@@ -1,7 +1,7 @@
 {
-  "name": "Artical framework",
+  "name": "Artical-framework",
   "version": "0.0.1",
-  "authorized ": "Shankar Kamble",
+  "authorized ": "Shankar-Kamble",
   "private": true,
   "scripts": {
     "start": "node app"
