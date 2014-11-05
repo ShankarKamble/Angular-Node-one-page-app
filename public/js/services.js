@@ -7,6 +7,7 @@
 
 'use strict';
 
+// added cachelayer for IE
 app.factory('httpRequestInterceptorCacheBuster', ['$q', function ($q) {
     return {
         request: function (request) {

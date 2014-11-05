@@ -5,6 +5,7 @@
 ***************************************************************/
 articalTagApp.controller('articalAppCtrl', ['$scope', '$http', function($scope, $http) {
 
+   // defualt case data 
     $scope.caseArticle = {};
     $scope.caseArticle.title = "Feature article story title";
     $scope.caseArticle.caption = " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed to" +
@@ -18,10 +19,12 @@ articalTagApp.controller('articalAppCtrl', ['$scope', '$http', function($scope, 
     $scope.caseArticle.image = "/images/article_1.jpg";
     $scope.caseArticle.des = " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed to" +
         "eiusmod tempor incididunt ut labore et dolore magna aliqua";
+
+    // defualt setting for limit , orderby  
     $scope.articleLimit = 8;
     $scope.predicate = "-date.timestamp";
-
-    //fetch static data for category and activity dropDown
+   
+    //fetch static data for articles
     $scope.fetchNotesData = function() {
         $http.get('/getStaticJsonData')
             .success(function(data) {
@@ -32,9 +35,10 @@ articalTagApp.controller('articalAppCtrl', ['$scope', '$http', function($scope, 
                 console.log(err);
             });
     };
-    $scope.sortVal = "title";
+    
     $scope.fetchNotesData();
 
+  //load more articals
     $scope.loadMore = function() {
         $scope.articleLimit += 8;
     }

@@ -4,7 +4,7 @@ var  http = require('http'),
       fs = require('fs');
 
 
-//Post the Json Data
+//get the Json Data
 exports.getStaticJsonData = function (req, res) {
     //Contains the location of the file
     var fileLocation = __dirname + '/../public/js/article-data.json';

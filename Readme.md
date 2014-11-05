@@ -18,20 +18,16 @@ Use Technology
 
 ## Installation
 To launch the application:
-1. Run $ npm install
-2. Run $ node app.js
-3. Open your browser and load the URL http://localhost:4000
+1.Download node from http://nodejs.org/download/ and install
+2. Run $ npm install
+3. Run $ node app.js
+4. Open your browser and load the URL http://localhost:4000
 
-
-Create a notes directive that supports setting following attributes:
-height
-width
-max-height
-max-width
-allowFullScreen
-Allow bind notes/textarea context to a js variable or json
-Methods to update/clear notes that can be called from the app/module using the directive
-Submit the directive along with a demo app and restrict if any/all DOM manipulation code within the directive code.
+Implementation
+ 1)Read the data from Json file and show .
+ 2)Select menu sorting functionality (Most recent [default] and Alphabetical)
+ 3)Cross browser compatible from IE9+, Firefox & Chrome
+ 4)Modern standards/progressive enhancements (HTML5/CSS3)
 
 
 Angular 1.2.0 release:
