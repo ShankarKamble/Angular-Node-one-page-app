@@ -39,3 +39,5 @@ http://getbootstrap.com/2.3.2/
 Reference:
 http://twitter.github.com/bootstrap
 http://angularjs.org
+
+Demo Url:-https://case-studies-2014.herokuapp.com/
